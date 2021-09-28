@@ -21,28 +21,23 @@ namespace CountingCharacters
             Dictionary<char, int> letters = new Dictionary<char, int>(30);
             foreach (char letter in sentence)
             {
-                // does the dictionary have this letter?
-                // if not, add (letter, 1)
+                // Does the dictionary have this letter?
+                // if not, add the letter to the dictionary with 1 occurence as a value
                 if (!letters.ContainsKey(letter))
                 {
                     letters.Add(letter, 1);
                 }
-                else // if yes, add one to that char count
+                else // if it does, add one to that char count
                 {
                     letters[letter] += 1;
                 }
-                // does the dictionary have this letter?
-                // if not,
-                    // add (letter, 1)
-                // if yes,
-                    // letter.charName += 1;
             }
-          
+            
+            // Loop to print all entries of the dictionary to console
             foreach (KeyValuePair<char, int> entry in letters){
                 Console.WriteLine($"{entry.Key} : {entry.Value}");
             }
 
-            //Store and/or update the count for a given character using an appropriate data structure.
 
         }
         // Will return a string with only letters (removes all other whitespace and non characters) // Exclude non-alphabetic characters
